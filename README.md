@@ -1,36 +1,45 @@
-🚀 Spring Boot Kafka Learning Project
+# 🚀 Spring Boot Kafka Learning Project
 
-This project demonstrates Apache Kafka integration with Spring Boot using a simple REST-based producer–consumer workflow.
-It is designed as a learning project to understand Kafka concepts such as topics, producers, consumers, serialization, and message flow.
+This project demonstrates **Apache Kafka integration with Spring Boot** using a simple REST-based producer–consumer workflow.  
+It is designed as a **learning project** to understand Kafka concepts such as topics, producers, consumers, serialization, and message flow.
 
-🛠️ Tech Stack
+---
 
-Java: 25
+## 🛠️ Tech Stack
 
-Spring Boot: 4.x
+- **Java:** 25  
+- **Spring Boot:** 4.x  
+- **Apache Kafka**  
+- **Maven**  
+- **REST API**
 
-Apache Kafka
+---
 
-Maven
+## 📌 Project Overview
 
-REST API
-
-📌 Project Overview
-
-The application exposes REST APIs to publish messages to Kafka topics.
+The application exposes REST APIs to publish messages to Kafka topics.  
 Consumers listen to these topics and process messages asynchronously.
 
-| Topic Name     | Key Type | Value Type                    |
-| -------------- | -------- | ----------------------------- |
-| `topicChamith` | `String` | `String`                      |
-| `topicChamith_json` | `String` | Java Object (JSON serialized) |
+### Kafka Topics
 
+| Topic Name             | Key Type | Value Type                    |
+|------------------------|----------|-------------------------------|
+| `topicChamith`         | `String` | `String`                      |
+| `topicChamith_json`    | `String` | Java Object (JSON serialized) |
+
+---
+
+## 📂 Project Structure
+
+```text
 src/main/java
-├── controller        # REST controllers (Producer APIs)
-├── kafka/producer          # Kafka producers
-├── kafka/consumer          # Kafka consumers
-├── config             # Kafka configuration
-└── SpringbootKafkaApplication   # Main Spring Boot application
+├── controller          # REST controllers (Producer APIs)
+├── kafka
+│   ├── producer        # Kafka producers
+│   └── consumer        # Kafka consumers
+├── config              # Kafka configuration
+└── KafkaApplication    # Main Spring Boot application
+```
 
 📡 REST API Endpoints
 1️⃣ Publish String Message
